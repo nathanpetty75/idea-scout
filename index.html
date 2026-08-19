@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Idea Scout — perpetual $10k lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Idea Scout</h1>
+      <p class="lede">Perpetual experimentation machine. Hunt ideas, run one 7-day bet, keep or kill. Goal: $10k+/mo software. No ads unless you flip that switch.</p>
+    </div>
+    <div class="stamp">goal $10k/mo · 1 live experiment</div>
+  </header>
+  <nav>
+    <button class="on" data-tab="board">Idea board</button>
+    <button data-tab="lab">Lab / keep-kill</button>
+    <button data-tab="forge">7-day experiment</button>
+    <button data-tab="math">$10k math</button>
+  </nav>
+  <main>
+    <section id="board">
+      <div class="loop">
+        <span>1 hunt</span><span>2 score</span><span>3 one experiment</span><span>4 keep or kill</span><span>5 never stop</span>
+      </div>
+      <p class="meta" id="updated"></p>
+      <div class="filters">
+        <button class="tag" data-filter="all">all</button>
+        <button class="tag" data-filter="none">no-spend</button>
+        <button class="tag" data-filter="active">active</button>
+        <button class="tag" data-filter="queue">queue</button>
+        <button class="tag" data-filter="ads">needs ads</button>
+      </div>
+      <div id="list"></div>
+    </section>
+    <section id="lab" hidden>
+      <div class="card" id="active-box"></div>
+      <div class="grid">
+        <div class="card"><h3>Queue</h3><ol id="queue"></ol></div>
+        <div class="card"><h3>Killed</h3><ul id="killed"></ul></div>
+      </div>
+    </section>
+    <section id="forge" hidden>
+      <div class="card">
+        <h3>Turn a messy idea into a 7-day experiment</h3>
+        <p class="meta">Runs in your browser. Nothing is uploaded.</p>
+        <label>Idea / niche</label>
+        <input id="niche" placeholder="e.g. honest MRR for indie SaaS" />
+        <label>Who pays?</label>
+        <input id="who" placeholder="e.g. solo founders with Stripe" />
+        <label>Price you will test</label>
+        <input id="price" type="number" value="29" />
+        <button class="go" id="build">Build the card</button>
+        <label>Copy this</label>
+        <textarea id="card" readonly></textarea>
+        <button class="go" id="copy">Copy</button>
+      </div>
+    </section>
+    <section id="math" hidden>
+      <div class="grid">
+        <div class="card">
+          <h3>How $10k/mo actually looks</h3>
+          <p>345 people × $29/mo<br>101 people × $99/mo<br>20 companies × $500/mo<br>1,000 people × $10/mo</p>
+          <p>This lab is no-spend until you say otherwise. Bias B2B, SEO utilities, extensions, directories, public-building on X.</p>
+        </div>
+        <div class="card">
+          <h3>Waitlist for the daily hunt</h3>
+          <p>When the board is useful every morning, that is the paid digest.</p>
+          <a class="go" href="mailto:nathan@nathanpetty.com?subject=Idea%20Scout%20waitlist">I am in — email Nathan</a>
+          <p class="meta">Hunts 08:00 / 12:00 / 16:00 PT. Scorecard 20:00 PT.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
